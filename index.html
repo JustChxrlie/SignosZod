@@ -1,0 +1,344 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signos Zodiacales</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .main-header {
+            background-color: #111;
+            text-align: center;
+            padding: 50px;
+            color: white;
+        }
+
+        .main-header h1 {
+            font-size: 3em;
+            margin: 0;
+            color: #ff3333;
+        }
+
+        .main-header p {
+            font-size: 1.2em;
+            margin: 10px 0 20px;
+            color: #ddd;
+        }
+
+        .zodiac-section {
+            padding: 40px;
+            background-color: #111;
+            position: relative;
+        }
+
+        .zodiac-section h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #ff3333;
+        }
+
+        .carousel-container {
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .zodiac-carousel {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+        }
+
+        .zodiac-card {
+            min-width: 200px;
+            height: 350px;
+            background-color: #222;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            color: white;
+            flex: 0 0 auto;
+        }
+        
+        .zodiac-card img {
+            width: 100px; 
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .zodiac-card h3 {
+            margin-top: 15px;
+            font-size: 1.5em;
+            color: #ff3333;
+        }
+
+        .zodiac-card p {
+            font-size: 1em;
+            color: #ddd;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #ff3333;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .carousel-btn.left {
+            left: 10px;
+        }
+
+        .carousel-btn.right {
+            right: 10px;
+        }
+
+        .guess-game {
+            margin: 40px auto;
+            text-align: center;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .guess-game input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ff3333;
+            margin-right: 10px;
+        }
+
+        .guess-game button {
+            padding: 10px 20px;
+            background-color: #ff3333;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .guess-game button:hover {
+            background-color: #cc0000;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 1.5em;
+        }
+                .subscribe {
+            margin-top: 40px;
+            text-align: right;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+        }
+        
+        .subscribe input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ff3333;
+            margin-right: 10px;
+        }
+        
+        .subscribe button {
+            padding: 10px 20px;
+            background-color: #ff3333;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .subscribe button:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="subscribe">
+        <h2>Suscríbete a nuestro boletín</h2>
+        <input type="email" id="emailInput" placeholder="Ingresa tu correo electrónico">
+        <button id="subscribeButton">Suscribirse</button>
+    </section>
+
+    <header class="main-header">
+        <h1>Los 12 Signos Zodiacales</h1>
+        <p>Explora las características de cada signo zodiacal.</p>
+    </header>
+
+    <section class="zodiac-section">
+        <h2>Signos del Zodiaco</h2>
+        <div class="carousel-container">
+            <button class="carousel-btn left" id="leftBtn">&#10094;</button>
+            <div class="zodiac-carousel" id="zodiacCarousel">
+                <!-- Sección única con todos los signos -->
+                <div class="zodiac-card">
+                    <img src="https://previews.123rf.com/images/soloviivka/soloviivka1702/soloviivka170200008/71027809-s%C3%ADmbolo-del-zodiaco-de-aries-icono-aislado-plano-del-zodiaco-rojo-sobre-el-fondo-gris.jpg" alt="Aries">
+                    <h3>Aries</h3>
+                    <p>21 de marzo - 19 de abril</p>
+                </div>
+                <div class="zodiac-card">
+                    <img src="https://static.vecteezy.com/system/resources/previews/013/786/264/non_2x/red-neon-zodiac-sign-taurus-on-white-predictions-astrology-horoscope-vector.jpg" alt="Tauro">
+                    <h3>Tauro</h3>
+                    <p>20 de abril - 20 de mayo</p>
+                </div>
+<div class="zodiac-card">
+                    <img src="https://img.freepik.com/fotos-premium/simbolo-zodiaco-neon-rojo-geminis-signo-horoscopo-brillo-neon-rojo-render-3d_582637-176.jpg" alt="Géminis">
+                    <h3>Géminis</h3>
+                    <p>21 de mayo - 20 de junio</p>
+                    <p>Comunicativo, curioso y siempre en movimiento.</p>
+                </div>
+                <div class="zodiac-card">
+                    <img src="https://www.shutterstock.com/image-illustration/red-neon-zodiac-sign-cancer-260nw-1865661868.jpg" alt="Cáncer">
+                    <h3>Cáncer</h3>
+                    <p>21 de junio - 22 de julio</p>
+                    <p>Emocional, protector y profundamente intuitivo.</p>
+                </div>
+                <div class="zodiac-card">
+                    <img src="https://st3.depositphotos.com/20363444/32289/i/450/depositphotos_322899306-stock-photo-red-illuminated-leo-zodiac-sign.jpg" alt="Leo">
+                    <h3>Leo</h3>
+                    <p>23 de julio - 22 de agosto</p>
+                    <p>Confidente, creativo y siempre listo para brillar.</p>
+                </div>
+                <div class="zodiac-card">
+                    <img src="https://www.shutterstock.com/image-illustration/red-neon-zodiac-sign-virgo-260nw-1876985368.jpg" alt="Virgo">
+                    <h3>Virgo</h3>
+                    <p>23 de agosto - 22 de septiembre</p>
+                    <p>Perfeccionista, lógico y con un gran amor por el detalle.</p>
+                </div>
+                <div class="zodiac-card">
+                    <img src="https://www.lafabricadebordados.es/1846-large_default/parche-bordado-zodiaco-signo-libra.jpg" alt="Libra">
+                    <h3>Libra</h3>
+                    <p>23 de septiembre - 22 de octubre</p>
+                    <p>Buscador de equilibrio, belleza y armonía en todo.</p>
+                </div>
+                <div class="zodiac-card">
+                    <img src="https://www.lafabricadebordados.es/1834-thickbox_default/parche-bordado-zodiaco-signo-escorpio.jpg" alt="Escorpio">
+                    <h3>Escorpio</h3>
+                    <p>23 de octubre - 21 de noviembre</p>
+                    <p>Intenso, apasionado y lleno de misterio.</p>
+                </div>
+                <div class="zodiac-card">
+                    <img src="https://static.vecteezy.com/system/resources/previews/013/257/046/non_2x/red-neon-zodiac-sign-sagittarius-on-white-predictions-astrology-horoscope-vector.jpg" alt="Sagitario">
+                    <h3>Sagitario</h3>
+                    <p>22 de noviembre - 21 de diciembre</p>
+                    <p>Aventurero, filosófico y amante de la libertad.</p>
+                </div>
+                <div class="zodiac-card">
+                    <img src="https://www.lafabricadebordados.es/1830-thickbox_default/parche-bordado-zodiaco-signo-capricornio.jpg" alt="Capricornio">
+                    <h3>Capricornio</h3>
+                    <p>22 de diciembre - 19 de enero</p>
+                    <p>Ambicioso, disciplinado y con un gran sentido de la responsabilidad.</p>
+                </div>
+                <div class="zodiac-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM0PZXLyiukT-XV77hbE3qwufwJYKre3w2aA&s" alt="Acuario">
+                    <h3>Acuario</h3>
+                    <p>20 de enero - 18 de febrero</p>
+                    <p>Independiente, visionario y amante de lo único.</p>
+                </div>
+                <div class="zodiac-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK0O7xf2Uq-WVjOcv0oJ8SSifRgCV1Tko-rQ&s" alt="Piscis">
+                    <h3>Piscis</h3>
+                    <p>19 de febrero - 20 de marzo</p>
+                    <p>Soñador, compasivo y profundamente conectado con las emociones.</p>
+                </div>            </div>
+            <button class="carousel-btn right" id="rightBtn">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="guess-game">
+        <h2>¿Adivina tu signo zodiacal?</h2>
+        <p id="clue">Aquí aparecerá una pista sobre un signo...</p>
+        <input type="text" id="userGuess" placeholder="Escribe tu respuesta">
+        <button id="submitGuess">Enviar</button>
+        <p class="result" id="resultMessage"></p>
+    </section>
+
+    <script>
+    
+        const clues = {
+            "Aries": "Soy el primero del zodiaco y mi energía es como una chispa de fuego.",
+            "Tauro": "Amo la estabilidad y disfruto de los placeres terrenales.",
+            "Géminis": "Siempre estoy en movimiento y soy muy comunicativo.",
+            "Cáncer": "Mis emociones son profundas, y siempre protejo a los que amo.",
+            "Leo": "Me encanta brillar y ser el centro de atención.",
+            "Virgo": "Soy detallista y siempre busco la perfección en todo lo que hago.",
+            "Libra": "Siempre busco equilibrio y armonía en mi vida.",
+            "Escorpio": "Soy intenso y apasionado, y me encanta el misterio.",
+            "Sagitario": "Soy aventurero y siempre estoy en busca de la verdad.",
+            "Capricornio": "La ambición es mi motor, siempre busco alcanzar grandes metas.",
+            "Acuario": "Soy independiente y me encanta pensar de manera única.",
+            "Piscis": "Soy un soñador y me dejo llevar por las emociones."
+        };
+
+        let zodiacSigns = Object.keys(clues);
+        let currentSign = zodiacSigns[Math.floor(Math.random() * zodiacSigns.length)];
+
+        const clueElement = document.getElementById("clue");
+        const resultMessage = document.getElementById("resultMessage");
+        const userGuess = document.getElementById("userGuess");
+        const submitGuess = document.getElementById("submitGuess");
+
+        clueElement.innerText = clues[currentSign];
+
+        submitGuess.addEventListener("click", () => {
+            let guess = userGuess.value.trim();
+            if (guess.toLowerCase() === currentSign.toLowerCase()) {
+                resultMessage.innerText = "¡Correcto! El signo es " + currentSign + ".";
+                resultMessage.style.color = "green";
+            } else {
+                resultMessage.innerText = "Incorrecto. Intenta nuevamente.";
+                resultMessage.style.color = "red";
+            }
+        });
+             const leftBtn = document.getElementById("leftBtn");
+        const rightBtn = document.getElementById("rightBtn");
+        const zodiacCarousel = document.getElementById("zodiacCarousel");
+
+        leftBtn.addEventListener("click", () => {
+            zodiacCarousel.scrollBy({
+                left: -200,
+                behavior: "smooth"
+            });
+        });
+
+        rightBtn.addEventListener("click", () => {
+            zodiacCarousel.scrollBy({
+                left: 200,
+                behavior: "smooth"
+            });
+        });
+        const emailInput = document.getElementById("emailInput");
+        const subscribeButton = document.getElementById("subscribeButton");
+
+        subscribeButton.addEventListener("click", () => {
+            const email = emailInput.value.trim();
+            if (!email.includes("@")) {
+                alert("El correo electrónico no es válido. Asegúrate de incluir un '@'.");
+            } else {
+                alert("¡Te has suscrito con el correo: " + email + "!");
+                emailInput.value = ""; // Limpiar el campo de entrada
+            }
+        });
+        
+    </script>
+</body>
+</html>
